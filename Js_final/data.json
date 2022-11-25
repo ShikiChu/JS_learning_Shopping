@@ -1,0 +1,22 @@
+[
+    {
+        "itemName" : "Aryclic Color Set",
+        "image":"image/aryclic.jpg",
+        "value" : 15,
+        "amount" : 0
+    },
+
+    {
+        "itemName" : "Chalk Pastel",
+        "image":"image/chalk_pastel.jpg",
+        "value" : 13,
+        "amount" : 0
+    },
+
+    {
+        "itemName" : "Water Color Set",
+        "image":"image/water_color.jpg",
+        "value" : 12,
+        "amount" : 0
+    }
+]

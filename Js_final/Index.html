@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shiki Chu">
+    <meta name="email" content="chu00075@algonquinlive.com">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="script/formValidation.js" defer></script>
+    <script src = "script/jquery-3.6.0.min.js"></script>
+    <script src = "script/summary.js" defer></script>
+    <script src="script/displayJSON.js"></script>
+
+    <title>Art supplier</title>
+</head>
+<body>
+    <header>
+        <h1>Student Art Supplies Order </h1>
+    </header>
+    <p>This is an art supplier for Ottawa high school students, we provide discounts for high school students <strong>ONLY</strong> .
+         Look up your products here.</p>
+    <p>Make sure you are high school students and put your information correctly for order.</p>
+    <hr>
+<!-- part one, user's form -->
+    <form action="" name = "form" class="form">
+        <fieldset>
+            <legend>
+                Student Information
+            </legend>
+            <!-- confirm that the user is a high school student in Ottawa -->
+            <div>
+              <input type="checkbox" name="confirmStudent" id="confirmStudent" value="confirmStudent">
+              <label for="confirmStudent">Tick the box if you are a student studying in Ottawa high school.</label>
+              <br>
+              <span class = 'errorRed' id="confirmStudentError"></span>
+              <br>
+            </div>
+              <!-- ask for user's name -->
+            <div>
+                <label for="name">Name:</label>
+                <br>
+                <input type="text" id="name" name="name" value="">
+                <br>
+                <span class = 'errorRed' id="nameError"></span>
+                <br>
+              </div>
+
+              <!-- ask for age -->
+            <div>
+                <label for="age">Age:</label>
+                <br>
+                <input type="number" id="age" name="age">
+                <br>
+                <span class = 'errorRed' id="ageError"></span>
+                <br>
+            </div>
+              <!-- ask for date -->
+            <div>
+              <label for="deliveryDate">Delivery date to your school:</label>
+              <br>
+              <input type="date" id="deliveryDate" name="deliveryDate" value="">
+              <br>
+              <span class="errorRed" id="dateError"></span>
+              <br>
+            </div>
+
+                <!-- ask for grade -->
+            <div>
+              <p>Which grade you are studying?</p>
+                <span class = 'errorRed' id="gradeError"></span>
+                <ul>
+                    <li>
+                      <label for="grade_10">
+                        <input type="radio" id="grade_10" name="grade" value="10">
+                        Grade 10
+                      </label>
+                    </li>
+                    <li>
+                      <label for="grade_11">
+                        <input type="radio" id="grade_11" name="grade" value="11" >
+                        Grade 11
+                      </label>
+                    </li>
+                    <li>
+                      <label for="grade_12">
+                        <input type="radio" id="grade_12" name="grade" value="12">
+                        Grade 12
+                      </label>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- ask for school district , editable-->
+            <div>
+              <label for="tip">Select Your School District:</label>
+              <br>
+                <input type="text" list="districtOptions" name="district" id="district">
+                  <datalist id="districtOptions">
+                    <option value="Barrhaven">Barrhaven</option>
+                    <option value="Kanata">Kanata</option>
+                    <option value="Nepean">Nepean</option>
+                    <option value="Orleans">Orleans</option>
+                    <option value="Central">Central</option>
+                    <option value="East">East</option>
+                    <option value="South">South</option>
+                    <option value="West">West</option>
+                  </datalist>
+              <br>
+              <span class = 'errorRed' id="districtError"></span>
+              <br>
+          </div>
+
+          <!-- read only total -->
+          <div>
+            <label for="total">Your total in CAD$:</label>
+            <input type="text" id="total" name="total" value="0" readonly>
+            <br>
+            <br>
+          </div>
+
+          <div>
+            <input type="submit" value="Submit" onclick="showStudentInfo()">
+              <input type="reset">
+          </div>
+        </fieldset>
+    </form>
+
+
+<!-- part 2, use JSON data into this div -->
+    <h3> Please click the image to add your order !</h3>
+
+    <section class="container">
+      <div class="tableHeader">
+        <h4>Image</h4>
+        <h4>Iteam Name</h4>
+        <h4>Value</h4>
+        <h4>Amount</h4>
+        <h4>Subtotal</h4>
+      </div>
+
+      <!-- the Json data will fill in here -->
+      <div class="dataFromJson">
+
+        <div class="Datarow">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- part 3, here is to show the order information after vaild form -->
+    <hr>
+    <h3> Your information : </h3>
+    <ul class="showStudentInfo">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+
+    </ul>
+
+    <h3>You picked the following items:</h3>
+    <ol class="showOrder">
+
+    </ol>
+
+</body>
+</html>

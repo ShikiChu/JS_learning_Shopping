@@ -1,0 +1,50 @@
+body{
+    background-color: beige;
+}
+
+h1, h3 {
+	text-align: center;
+}
+
+.errorRed {
+    color: red
+}
+abbr {
+	color: red;
+}
+
+img {
+    width: 150px;
+}
+
+/* display the div table */
+
+.container {
+	border: 2px solid black;
+  }
+
+.tableHeader {
+	display: flex;
+  	flex-direction: row;
+  	justify-content: space-around;
+  	border-bottom: 1px solid black;
+	padding-left: -25%;
+}
+
+.dataFromJson{
+	display: flex;
+  	flex-direction: row;
+	  padding-left: 3%;
+}
+
+.Datarow ul {
+	list-style: none;
+  	display: flex;
+  	flex-direction: row;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.Datarow ul li {
+	width: 20vw;
+  }
